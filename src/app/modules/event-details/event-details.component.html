@@ -1,0 +1,11 @@
+<div class="event-detail__container">
+    <span class="span__contain" (click)="comeBack()">Volver</span>
+    <h1>CONCIERTO DE <strong>{{locations.title}}</strong></h1>
+    <div class="event-detail__contain">
+        <!-- LISTADO DE EVENTOS -->
+        <app-session-list [sessions]="sessions" [eventId]="eventId" [locationMap]="locationMap" (entryAdded)="addToCart($event.sessionId)" (removeFromCartClicked)="removeFromCart($event.sessionId)"></app-session-list>
+
+        <!-- CARRITO DE LA COMPRA -->
+        <app-shopping-cart [locationMap]="locationMap" (removeFromCartClicked)="removeFromCart($event.sessionId)"></app-shopping-cart>
+    </div>
+</div>

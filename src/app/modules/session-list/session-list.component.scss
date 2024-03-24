@@ -1,0 +1,31 @@
+.offer__container {
+    border: 1px solid black;
+    margin: 0;
+    padding: 1rem;
+    width: 439px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .offer__contain {
+        margin: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .buttons-container {
+            display: flex;
+            align-items: center;
+            .remove-button__buttons,
+            .add-button__buttons {
+                color: #007bff;
+                padding: 8px;
+                cursor: pointer;
+            }
+            .disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+

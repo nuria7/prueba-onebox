@@ -1,0 +1,16 @@
+<div class="cards" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+    @for(event of events; track event.id) {
+    <mat-card class="event-card__card" fxLayout="column" fxFlex="100" fxLayoutGap="0.5rem">
+        <mat-card-header>
+            <mat-card-title><strong>{{ event.title }}</strong></mat-card-title>
+            <mat-card-subtitle>{{ event.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <img class="event-image" src="{{ event.image }}" alt="{{ event.title }}">
+            <p>{{ event.startDate | date:'dd/MM/yyyy' }} - {{ event.endDate | date:'dd/MM/yyyy' }}</p>
+            <p class="description" [innerHTML]="event.description"></p>
+            <button class="buy__button" (click)="goToDetailPage(event.id)"><strong>COMPRAR</strong></button>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>

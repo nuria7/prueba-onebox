@@ -1,0 +1,23 @@
+<div class="shopping-cart__container">
+    <div class="shopping-cart__contain">
+        @for(value of locationMap | keyvalue; track value.key; let rowIndex = $index) {
+        <ng-container>
+            <div class="shopping-cart-row">
+                <h1>{{ value.value[0].locations.title}}</h1>
+                @for(location of value.value; track location.locations.id) {
+                    <div class="shopping-cart-item">
+                        <p>{{ location.session.date | date: 'dd/MM/YYYY' }}</p>
+                        <div class="shopping-cart-item-span">
+                            <span>x{{ location.quantity }}</span>
+                            <span mat-icon-button (click)="removeFromCart(location.session, rowIndex)" class="trash-icon-span">
+                                <img src="../../../assets/img/trash.png">
+                            </span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </ng-container>
+        }
+        
+    </div>
+</div>

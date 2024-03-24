@@ -1,0 +1,36 @@
+:host {
+    width: 100%;
+    display: flex;
+    margin-left:5%;
+}
+
+.shopping-cart__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .shopping-cart__contain {
+        display: flex;
+        flex-wrap: wrap;
+        .shopping-cart-row {
+            width: 100%;
+            .shopping-cart-item {
+                display: flex;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                .trash-icon-span img {
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    width: 20px;
+                }
+            }
+            .shopping-cart-item p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .shopping-cart-item-span {
+        display: flex;
+        align-items: center;
+        margin-left: 130%;
+    }
+}

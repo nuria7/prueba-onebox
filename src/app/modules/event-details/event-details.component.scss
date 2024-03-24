@@ -1,0 +1,25 @@
+.event-detail__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .span__contain {
+        cursor: pointer;
+        color: #00bfff;
+        font-weight: bold;
+        margin-bottom: 20px;
+        align-self: flex-end;
+        margin-right: 50px;
+    }
+    .event-detail__contain {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .event-detail__contain {
+        flex-direction: column;
+    }
+}

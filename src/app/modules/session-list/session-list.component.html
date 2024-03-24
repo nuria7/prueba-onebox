@@ -1,0 +1,18 @@
+<div class="offer__container">
+    @for(session of sessions; track session.availability; let idx = $index) {
+    <div class="offer__contain">
+        <span>Fecha: <strong>{{ session.date | date:'dd/MM/yyyy' }}</strong></span>
+        <span>Disponibilidad: <strong>{{ session.availability }}</strong></span>
+
+        <div class="buttons-container">
+            <span mat-icon-button class="remove-button__buttons" [ngClass]="{ 'disabled': isRemoveButtonDisabled(session) }" (click)="removeFromCart(session, idx)">
+                <mat-icon>remove</mat-icon>
+            </span>
+            <span>{{ getLocationMapQuantity(session) }}</span>
+            <span mat-icon-button class="add-button__buttons" [ngClass]="{ 'disabled': isAddButtonDisabled(session) }" (click)="addToCart(session, idx)">
+                <mat-icon>add</mat-icon>
+            </span>
+        </div>
+    </div>
+    }
+</div>

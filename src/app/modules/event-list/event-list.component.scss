@@ -1,0 +1,44 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .event-card__card {
+        position: relative;
+        width: calc(50% - 20px);
+        max-width: 487px;
+        height: 427px;
+        border: 1px solid #426edc;
+        margin: 10px;
+        overflow: hidden;
+        mat-card-header,
+        mat-card-subtitle {
+            color: #63B6CD;
+        }
+        mat-card-title {
+            font-size: 15px;
+        }
+        mat-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .buy__button {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #426edc;
+                border: 0;
+                color: white;
+                padding: 0.5rem;
+                cursor: pointer;
+            }
+            .event-image {
+                width: 100%;
+                height: auto;
+            }
+            .description {
+                margin: 0;
+            }
+        }
+    }
+}
